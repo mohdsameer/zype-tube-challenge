@@ -1,0 +1,18 @@
+<%if @video.subs %>
+  <%=render partial:'videos/subs'%>
+<%else %>
+  <%=render partial: 'videos/norm'%>
+<%end%>
+<br>
+  <div id="title">
+    <h3><%=@video.title%></h3>
+  </div>
+  <div id="date published">
+    <p>Published on: <%=@video.published_at.strftime('%A, %B %d, %Y')%></p>
+  </div>
+  <div id="description">
+    <p><%=@video.description%></p>
+  </div>
+<br>
+<br>
+  <a href="/videos/<%=@page%>">Back to Videos</a>

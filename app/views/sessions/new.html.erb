@@ -1,0 +1,15 @@
+<div class="main">
+  <div class="log_in">
+    <div class="log_inner">
+      <h2>Login</h2>
+      <%= form_with  url: sessions_path, id: "login", local: true do |f| %>
+      <%= f.text_field :username , placeholder: "Username" %>
+      <%= f.password_field :password , placeholder: "Password" %>
+      <div class="submit">
+        <%= f.submit "Login"%>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

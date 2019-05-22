@@ -1,0 +1,11 @@
+<ul>
+  <li >
+  <% if session[:token]%>
+    <%= link_to "logout", {:controller=> "sessions", :action=> "destroy"}, :method => :delete%>
+  </li>
+  <%else%>
+  <li>
+    <%=link_to 'Login', sessions_path %>
+  </li>
+  <%end%>
+</ul>

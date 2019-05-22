@@ -1,0 +1,21 @@
+<footer class="footer-nav">
+  <%if @page == '1'|| @page.nil? %>
+    <a href="/videos/<%=2%>">
+      <h1 id="right-paginate">Page: <%=@page.to_i + 1 %> --></h1>
+    </a>
+  <%else%>
+    <li>
+      <a href="/videos/<%=@page.to_i - 1%>">
+        <h1 id="left-paginate"><--Page: <%=@page.to_i - 1 %></h1>
+      </a>
+    </li>
+    <li>
+      <!--<h1 id="center-paginate">Current Page: <%=@page%></h1>-->
+    </li>
+    <li>
+      <a href="/videos/<%=@page.to_i + 1%>">
+        <h1 id="right-paginate">Page: <%=@page.to_i + 1 %> --></h1>
+      </a>
+    </li>
+  <%end%>
+</footer>
