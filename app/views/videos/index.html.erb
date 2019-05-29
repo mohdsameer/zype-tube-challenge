@@ -10,7 +10,7 @@
   <div class="row">
     <div>
       <%@videos.each do |video|%>
-        <%=render partial: 'videos/index_row', :locals => {:video => video, :page => @page} %>
+        <%=render partial: 'videos/index_row', :locals => {:video => video} %>
       <%end%>
     </div>
   </div>
